@@ -1,7 +1,6 @@
-n = int(input())
+from itertools import product
 
-for i in range(n):
-    num = int(input())
-    nums = list(map(int, input().split()))
-    print(min(nums), max(nums))
-    nums.clear()
+num1, num2 = input().split()
+num1, num2 = list(map(int, num1)), list(map(int, num2))
+
+print(sum(num1) * sum(num2))
