@@ -1,0 +1,21 @@
+def solution(lottos, win_nums):
+    answer = []
+    count1 = 7
+    count2 = 7
+    
+    for i in lottos:
+        if i == 0:
+            count1 -= 1
+        for j in range(len(win_nums)):
+            if i == win_nums[j]:
+                count1 -= 1
+        for k in range(len(win_nums)):
+            if i == win_nums[k]:
+                count2 -= 1
+    if count1 > 6:
+        count1 = 6
+    if count2 > 6:
+        count2 = 6
+
+    answer = [count1, count2]
+    return answer
