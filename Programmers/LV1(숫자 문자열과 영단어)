@@ -1,0 +1,14 @@
+def solution(s):
+    answer = s.replace('zero', '0')
+    answer = s.replace('one', '1')
+    answer = s.replace('two', '2')
+    answer = s.replace('three', '3')
+    answer = s.replace('four', '4')
+    answer = s.replace('five', '5')
+    answer = s.replace('six', '6')
+    answer = s.replace('seven', '7')
+    answer = s.replace('eight', '8')
+    answer = s.replace('nine', '9')
+
+    
+    return answer
