@@ -1,0 +1,7 @@
+def solution(s):
+    n = []
+    for i in s:
+        if s.count(i) == 1:
+            n.append(i)
+    n.sort()
+    return "".join(n)
