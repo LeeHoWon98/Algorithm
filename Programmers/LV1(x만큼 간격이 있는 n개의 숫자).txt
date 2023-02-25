@@ -1,0 +1,10 @@
+def solution(x, n):
+    answer = []
+    num = x
+    j = 1
+    for i in range(n):
+        j += 1
+        answer.append(num)
+        num = x*j
+
+    return answer
