@@ -1,0 +1,10 @@
+def solution(array):
+    answer = 0
+    array = map(str, array)
+    s = "".join(array)
+    
+    for i in s:
+        if i == "7":
+            answer += 1
+            
+    return answer
