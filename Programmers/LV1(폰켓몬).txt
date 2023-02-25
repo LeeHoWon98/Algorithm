@@ -1,0 +1,14 @@
+def solution(nums):
+    num = (len(nums)) // 2
+    answer = 0
+    my_set = set(nums)
+    my_list = list(my_set)
+    
+    for i in range(len(my_list)):
+        answer += 1
+    if num <= answer:
+        answer = num
+    else:
+        answer
+    
+    return answer
