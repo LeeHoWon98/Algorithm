@@ -1,0 +1,8 @@
+def solution(s):
+    answer = ""
+    num = s.split()
+    num1 = int(max(num))
+    num2 = int(min(num))
+
+    
+    return num2, num1
