@@ -1,0 +1,14 @@
+def solution(array, n):
+    result_val = []
+    re_result = []
+    
+    for i in array:
+        result_val.append(abs(i-n))
+        
+    point = min(result_val)
+    
+    for j in array:
+        if abs(j-n) == point:
+            re_result.append(j)
+    re_result.sort()
+    return re_result[0]
