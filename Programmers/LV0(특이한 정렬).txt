@@ -1,0 +1,11 @@
+def solution(numlist, n):
+    answer = []
+    result = []
+    
+    for i in numlist:
+        answer.append([i, abs(i-n)])
+    answer.sort(key=lambda x:(x[1], -x[0]))
+    
+    for j in answer:
+        result.append(j[0])
+    return result
