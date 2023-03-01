@@ -1,0 +1,16 @@
+def solution(score):
+    answer = []
+    result_li = []
+    
+    for i in score:
+        result = sum(i)
+        answer.append(result)
+        
+    for j in range(len(answer)):
+        c = 1
+        for k in range(len(answer)):
+            if answer[j] < answer[k]:
+                c += 1
+        result_li.append(c)
+    
+    return result_li
