@@ -1,0 +1,10 @@
+def solution(spell, dic):
+    result = []
+    for i in dic:
+        if sorted(spell) == sorted(i):
+            result.append(i)
+    
+    if len(result) != 0:
+        return 1
+    else:
+        return 2
