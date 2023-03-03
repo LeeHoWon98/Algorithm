@@ -1,0 +1,17 @@
+def solution(id_pw, db):
+    result = []
+    for i in db:
+        if id_pw[0] in i:
+            if id_pw[1] == i[1]:
+                result.append("login")
+            elif id_pw[1] != i[1]:
+                result.append("wrong pw")
+        else:
+             result.append("fail")
+                
+    if "login" in result:
+        return "login"
+    elif "wrong pw" in result:
+        return "wrong pw"
+    else:
+        return "fail"
