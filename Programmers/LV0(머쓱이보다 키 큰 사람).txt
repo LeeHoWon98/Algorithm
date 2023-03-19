@@ -1,0 +1,5 @@
+def solution(array, height):
+    answer = array
+    answer.append(height)
+    answer.sort(reverse=True)
+    return answer.index(height)
