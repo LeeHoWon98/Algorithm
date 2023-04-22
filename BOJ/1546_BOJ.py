@@ -1,8 +1,10 @@
 n = int(input())
-m = list(map(int, input().split()))
-new_max = max(m)
+point = list(map(int, input().split()))
+m_point = max(point)
 
-for i in range(n):
-    m[i] = m[i]/new_max*100
+sum = 0
 
-print("%.2f" %(sum(m)/ n))
+for i in point:
+    sum += i/m_point*100
+
+print("%.2f"%(sum/n))
