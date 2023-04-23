@@ -1,9 +1,15 @@
-n = int(input())
-nums = list(map(int, input().split()))
+n = 2
+output = 0
+inputs = [1, 4, 3, 2]
+
 result = []
 
-for i in range(1, len(nums)-1):
-    if nums[i+1] - nums[i] != 1:
-        result.append(nums[i+1])
+inputs.sort()
 
-print(sum(result)+nums[0])
+for i in inputs:
+    result.append(i)
+    if len(result) == 2:
+        output += min(result)
+        result.clear()
+
+print(output)
