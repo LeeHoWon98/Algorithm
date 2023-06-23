@@ -1,0 +1,23 @@
+def solution(participant, completion):
+    
+    answer = ""
+    
+    d = dict()
+    
+    for i in participant:
+        if i in d:
+            d[i] += 1
+        else:
+            d[i] = 1
+            
+    for j in completion:
+        if i in d:
+            d[j] += 1
+        else:
+            d[j] = 1
+        
+    for k, v in d.items():
+        if v % 2 != 0:
+            answer = k
+    
+    return answer
