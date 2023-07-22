@@ -1,10 +1,15 @@
 def solution(name, yearning, photo):
     answer = []
-    for peoples in photo:
-        result = 0
-        for people in peoples:
-            if people in name:
-                result += yearning[name.index(people)]
-        answer.append(result)
-
+    d = {}
+    
+    for i in range(len(name)):
+        d[name[i]] = yearning[i]
+    
+    for j in photo:
+        sum = 0
+        for k in j:
+            if k in d:
+                sum += d[k]
+        answer.append(sum)  
+    
     return answer
