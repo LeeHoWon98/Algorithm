@@ -1,16 +1,16 @@
-import collections
+s = input()
+s = s.lower()
+d = {}
 
-s1 = input()
-s1 = s1.lower()
-
-counts1 = collections.Counter(s1)
-
-counts = sorted(counts1.values(), reverse = True)
-
-if len(counts) != 1:
-    if counts[0] == counts[1]:
-        print("?")
+for i in s:
+    if i in d:
+        d[i] += 1
     else:
-        print(str(counts1.most_common(1)[0][0]).upper())
+        d[i] = 1
+
+d = sorted(d.items(), key=lambda x:-x[1])
+
+if len(d) >= 2 and d[0][1] == d[1][1]:
+    print('?')
 else:
-    print(str(counts1.most_common(1)[0][0]).upper())
+    print(d[0][0].upper())
