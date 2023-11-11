@@ -1,12 +1,22 @@
-n = int(input())
-d = {}
+import sys
 
-for i in range(n):
-    word = input()
-    word = "".join(sorted(word))
-    if word in d:
-        d[word] += 1
-    else:
-        d[word] = 1
+while 1:
+    n1, n2 = map(int,sys.stdin.readline().split())
+    d = {}
+    c = 0
 
-print(len(d))
+    if n1 == 0 and n2 == 0:
+        break
+    
+    for i in range(n1+n2):
+        cd = int(sys.stdin.readline())
+        if cd in d:
+            d[cd] += 1
+        else:
+            d[cd] = 1
+        
+    for k,v in d.items():
+        if v == 2:
+            c += 1
+
+    print(c)
